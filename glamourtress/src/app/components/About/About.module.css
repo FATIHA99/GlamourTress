@@ -1,0 +1,26 @@
+.aboutImageContainer {
+  position: relative;
+
+  height: 300px; /* Fixed height for mobile */
+
+}
+
+.aboutImage {
+  position: absolute;
+  
+  height: 100%;
+  object-fit: cover; 
+  top: 0;
+  left: 0;
+  object-position: center; 
+}
+.text-container p{
+  text-justify: distribute;
+}
+
+/* Responsive adjustments for screens > 768px */
+@media (min-width: 768px) {
+  .aboutImageContainer {
+    height: 400px; /* Adjust height for larger screens */
+  }
+}

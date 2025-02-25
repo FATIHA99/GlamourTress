@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Eastwood';
+  src: url('/fonts/Eastwood.woff') format('woff'),
+       url('/fonts/Eastwood.ttf') format('truetype'),
+       url('/fonts/Eastwood.otf') format('opentype'),
+       url('/fonts/Eastwood.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'MonospaceTypewriter';
+  src: url('/fonts/MonospaceTypewriter.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: 'Coolvetica-Rg';
+  src: url('/fonts/Coolvetica-Rg.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}  
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 
+.Eastwood{
+  font-family: 'Eastwood';
+  font-size: large  ;
+}
+.Monospace{ 
+  font-family: 'MonospaceTypewriter';
+  font-size: medium;
+}
+.Coolvetica{
+  font-family: 'Coolvetica-Rg';
+  font-weight: normal;
+}
+.sectionTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.Roboto{
+  font-family: 'Roboto-Regular';
+}

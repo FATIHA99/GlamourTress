@@ -1,0 +1,81 @@
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.heroSlide {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.heroSlide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+}
+
+.heroContent {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1; 
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.ctaButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  background-color: #f8cee5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #c73d62;
+}
+
+
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #fff;
+}
+.heroTitle{
+  font-family: 'Eastwood';
+  font-size: large  ;
+}
+.heroDescription{
+  font-family: 'Roboto-Regular';
+  font-size: medium;
+}

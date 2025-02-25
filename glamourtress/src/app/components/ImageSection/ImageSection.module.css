@@ -1,0 +1,22 @@
+/* components/ImageSection.module.css */
+
+.imageSection {
+    text-align: center;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.imageSection img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 300px; /* Limit maximum height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .imageSection img {
+        max-height: 300px; /* Smaller height on mobile */
+    }
+}

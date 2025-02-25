@@ -1,0 +1,162 @@
+/* styles/GetInTouch.module.css */
+.getInTouch {
+    /* background: #f9f9f9; */
+    padding: 100px 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .mapContainer {
+    flex: 1;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .mapContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contactInfo {
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 3;
+    padding: 40px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-family: 'Roboto-Regular';
+  }
+  
+  .contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .contactItem {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contactItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    color: #ff6f61;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+  }
+  
+  .phoneWrapper,
+  .emailWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .label{
+ 
+    font-weight: bold;
+    color: #c73d62;
+
+  }
+  
+  .phoneValue,
+  .emailValue {
+    color: #555;
+    font-size: 1.2rem;
+    font-weight: 500;
+    word-break: break-word; /* Ensure long text wraps */
+    display: block; /* Ensure value is on a new line */
+    margin-top: 10px; /* Add space between icon + label and value */
+    font-family: 'Roboto-Regular';
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .mapContainer {
+      height: 300px;
+    }
+  
+    .contactInfo {
+      height: auto;
+    }
+  
+    .content {
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .contactItem {
+      padding: 15px;
+      gap: 10px; /* Reduce gap between items */
+    }
+  }

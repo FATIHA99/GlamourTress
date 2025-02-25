@@ -1,0 +1,147 @@
+/* styles/CustomerReviews.module.css */
+.customerReviews {
+  padding: 100px 20px;
+  background: #f8cee5;
+  text-align: center;
+  /* border-radius: 20% 0% 20% 0% ; */
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.swiperContainer {
+  padding: 20px;
+}
+
+.reviewCard {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviewCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff6f61;
+}
+
+.reviewerInfo {
+  text-align: left;
+}
+
+.reviewerName {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.reviewerLocation {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.stars {
+  margin-bottom: 15px;
+}
+
+.starFilled {
+  color: #ffd700; /* Gold color for filled stars */
+  font-size: 1.2rem;
+}
+
+.starEmpty {
+  color: #ccc; /* Gray color for empty stars */
+  font-size: 1.2rem;
+}
+
+.reviewText {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Swiper Navigation and Pagination Styles */
+.swiper-pagination-bullet {
+  background: #ccc; /* Inactive dot color */
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px !important; /* Add spacing between dots */
+  transition: background 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000000 !important; /* Active dot color */
+  width: 12px; /* Slightly larger active dot */
+  height: 12px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ff6f61;
+}
+
+/* Hide navigation arrows on mobile */
+@media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .reviewCard {
+    padding: 20px;
+  }
+
+  .reviewHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
