@@ -1,9 +1,8 @@
-/* styles/CustomerReviews.module.css */
 .customerReviews {
   padding: 100px 20px;
   background: #f8cee5;
   text-align: center;
-  /* border-radius: 20% 0% 20% 0% ; */
+  overflow: hidden;
 }
 
 .title {
@@ -24,20 +23,37 @@
 
 .swiperContainer {
   padding: 20px;
+  overflow: hidden !important;
+}
+
+.swiper {
+  overflow: hidden !important;
+  width: 100%;
 }
 
 .reviewCard {
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* border-radius:  0px 50px 0px 0px; */
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
   padding: 30px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .reviewCard:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); */
+}
+
+.reviewContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .reviewHeader {
@@ -53,6 +69,7 @@
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ff6f61;
+  flex-shrink: 0;
 }
 
 .reviewerInfo {
@@ -76,12 +93,12 @@
 }
 
 .starFilled {
-  color: #ffd700; /* Gold color for filled stars */
+  color: #ffd700;
   font-size: 1.2rem;
 }
 
 .starEmpty {
-  color: #ccc; /* Gray color for empty stars */
+  color: #ccc;
   font-size: 1.2rem;
 }
 
@@ -89,21 +106,23 @@
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
+  flex-grow: 1;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
-/* Swiper Navigation and Pagination Styles */
 .swiper-pagination-bullet {
-  background: #ccc; /* Inactive dot color */
+  background: #ccc;
   opacity: 1;
   width: 10px;
   height: 10px;
-  margin: 0 5px !important; /* Add spacing between dots */
+  margin: 0 5px !important;
   transition: background 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-  background: #000000 !important; /* Active dot color */
-  width: 12px; /* Slightly larger active dot */
+  background: #000000 !important;
+  width: 12px;
   height: 12px;
 }
 
@@ -112,7 +131,16 @@
   color: #ff6f61;
 }
 
-/* Hide navigation arrows on mobile */
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+}
+
 @media (max-width: 767px) {
   .swiper-button-next,
   .swiper-button-prev {
@@ -120,28 +148,37 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+  .customerReviews {
+    padding: 60px 15px;
+  }
   .title {
     font-size: 2rem;
   }
-
   .subtitle {
     font-size: 1rem;
   }
-
   .reviewCard {
     padding: 20px;
+    min-height: 280px;
   }
-
   .reviewHeader {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     gap: 10px;
   }
-
   .avatar {
     width: 60px;
     height: 60px;
+  }
+  .reviewText {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviewHeader {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

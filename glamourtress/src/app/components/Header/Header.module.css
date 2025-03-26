@@ -4,3 +4,10 @@
         font-size: large  ;
       
 }
+.navLinks :hover{
+   
+        font-family: 'Eastwood';
+        font-size: large  ;
+  color: #c73d62;
+      
+}
